@@ -9,6 +9,6 @@ public class Student extends Person {
 
 //        System.out.println(p.city);
 //        System.out.println(p.phoneNumber);
-        System.out.println(p.name);
+//        System.out.println(p.name);
     }
 }
