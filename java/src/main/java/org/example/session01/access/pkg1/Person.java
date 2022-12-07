@@ -4,31 +4,18 @@ public class Person {
     private int age;
     protected String city;
     String phoneNumber;
-    private String firstName;
-    private String lastName;
+    private String[] nameSegments;
 
     public String getFullName() {
-        return firstName + " " + lastName;
+        return String.join(" ", nameSegments);
     }
 
     public void setFullName(String fullName) {
-        String[] names = fullName.split(" ");
-        if (names.length == 2) {
-            firstName = names[0];
-            lastName = names[1];
-        } else if (names.length == 1) {
-            firstName = names[0];
-            lastName = "";
-        } else if (names.length == 0) {
-            firstName = "";
-            lastName = "";
-        } else {
-            firstName = names[0];
-            lastName = names[names.length - 1];
-        }
+        this.nameSegments = fullName.split(" ");
+
     }
     public boolean hasLastName () {
-        return lastName != null && !lastName.isEmpty();
+        return nameSegments.length > 1;
     }
 
     public static class Builder {

@@ -7,5 +7,11 @@ public class Main {
         System.out.println("Hello world!");
 
         Person p = new Person.Builder().build();
+        p.setFullName("John");
+        System.out.println(p.getFullName());
+        System.out.println("P has last name ? " + p.hasLastName());
+
+        p.setFullName("Ranjeet Singh Arora");
+        System.out.println(p.getFullName());
     }
 }
