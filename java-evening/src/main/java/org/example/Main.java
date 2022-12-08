@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.abstractvsinterface.Database;
+import org.example.abstractvsinterface.Storage;
+
 public class Main {
     public static class Fruit {}
     public class Apple extends Fruit {}
@@ -11,6 +14,9 @@ public class Main {
 
         Main m = new Main();
         m.appleMaker();
+//
+//        Database localDB = new Database(new Storage.LocalStorage());
+//        Database inMemDB = new Database(new Storage.MemoryStorage());
 
     }
 
