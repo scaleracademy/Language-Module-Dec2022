@@ -1,5 +1,6 @@
 package org.example.generics;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Variance {
@@ -39,6 +40,8 @@ public class Variance {
 
         fruitBowl.add(alphonso);
         fruitBowl.addAll(mangoBasket);
+
+        Collections.copy(fruitBowl, mangoBasket);
 
     }
 }
