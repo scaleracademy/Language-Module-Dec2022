@@ -62,3 +62,5 @@ List<A> can be used where List<? super B> is written;  (contravariance)
 
 
 ```
+
+![](./variance.png)
