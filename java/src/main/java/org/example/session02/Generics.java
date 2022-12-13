@@ -41,11 +41,26 @@ public class Generics {
         printFruits(apples);
 
         Collections.copy(fruits, apples);
+
+        List<Object> objects = new ArrayList<>();
+        objects.addAll(fruits);
+        objects.addAll(apples);
+        List<String> strings = new ArrayList<>();
+        strings.add("ASdsad");
+        strings.add("ASdsad");
+
+        strings.addAll((List) fruits); // due to type-erasure
+        System.out.println(strings);
+
     }
 
     static void printFruits(List<? extends Fruit> fruits) {
         for (Fruit fruit : fruits) {
             System.out.println(fruit.name);
         }
+    }
+
+    static void modifyList(List<Object> objects) {
+        objects.add(new Object());
     }
 }
